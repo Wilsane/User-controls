@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="Front.Payment_Page"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Front"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Canvas Background="White">
+            <Label Content="Payment details" Canvas.Left="275" Canvas.Top="10" FontSize="28" FontFamily="Cambria" FontWeight="Bold" Foreground="#FF4196E1"/>
+            <TextBlock Canvas.Left="50" Canvas.Top="75" TextWrapping="Wrap" Height="80" Width="515" FontSize="20" FontFamily="Californian FB"><Run Text="Your payment details are stored safely and securely. "/><LineBreak/><Run Text="These card details will be used for your R1 500 monthly  bill"/><Run Language="en-gb" Text="."/><LineBreak/><Run Language="en-gb" Text="And if consultation is required R850 will be deducted per hour"/></TextBlock>
+            <Border BorderThickness="1" BorderBrush="#FFDDDDDD" Height="44" Width="345" Canvas.Left="50" Canvas.Top="160" CornerRadius="10">
+                <TextBox x:Name="CardNum_txt" TextWrapping="Wrap" Margin="0,9,0,9" HorizontalAlignment="Center" Width="325" Style="{StaticResource CardNumber_txt_Placeholder}" FontSize="14"/>
+            </Border>
+            <Border BorderThickness="1" BorderBrush="#FFDDDDDD" Height="44" Width="202" Canvas.Left="463" Canvas.Top="160" CornerRadius="10">
+                <TextBox x:Name="CVV_txt" TextWrapping="Wrap" Margin="9,9,9,9" Style="{StaticResource CardCVV_txt_Placeholder}"/>
+            </Border>
+            <Border BorderThickness="1" BorderBrush="#FFDDDDDD" Height="44" Width="345" Canvas.Left="50" Canvas.Top="225" CornerRadius="10">
+                <TextBox x:Name="CardHolder_txt" TextWrapping="Wrap" Margin="9,9,9,9" Style="{DynamicResource CardHolder_txt_Placeholder}"/>
+            </Border>
+            <Border BorderThickness="1" BorderBrush="#FFDDDDDD" Height="44" Width="202" Canvas.Left="463" Canvas.Top="225" CornerRadius="10">
+                <TextBox x:Name="ExpDate_txt" TextWrapping="Wrap" Style="{StaticResource ExpDate_txt_Placeholder}" Margin="9,9,9,9" TextChanged="TextBox_TextChanged"/>
+            </Border>
+            <Button x:Name="paymentNext_btn" Content="Next" Canvas.Left="50" Canvas.Top="295" Height="30" Width="70" Style="{StaticResource rndButton}" FontFamily="Bell MT" FontSize="22" Background="#FF4196E1" Foreground="White"/>
+
+        </Canvas>
+    </Grid>
+</UserControl>

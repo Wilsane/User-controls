@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="Front.LogIn_Page"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:Front"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="500">
+    <Grid>
+        <Canvas Background="White">
+            <Image Height="199" Canvas.Left="90" Canvas.Top="1" Width="310" Source="/WhatsApp Image 2021-08-12 at 10.32.55 (1).jpeg" RenderTransformOrigin="0.5,0.588"/>
+            <Label Content="sign in" Canvas.Left="209" Canvas.Top="180" FontFamily="Tw Cen MT Condensed Extra Bold" FontSize="28" FontWeight="Normal"/>
+            <Label Content="Use your Business-Online-Basics Account" Canvas.Left="75" Canvas.Top="220" Width="360" RenderTransformOrigin="0.617,0.385" FontFamily="Arial" FontSize="18"/>
+            <RadioButton GroupName="Forgot_PWD" Style="{StaticResource Radio_Theme}" x:Name="forgotPass_rdb" BorderBrush="{x:Null}"  Content="Forgot password?" Canvas.Left="120" Canvas.Top="368" Foreground="RoyalBlue" FontWeight="Normal" FontFamily="Adobe Garamond Pro" FontSize="18" Background="{x:Null}" BorderThickness="0" Checked="forgotPass_rdb_Checked"/>
+            <RadioButton GroupName="createAcc" Style="{StaticResource Radio_Theme}" x:Name="createAcc_rdb" Background="Transparent" BorderThickness="0" Content="Create Account" Canvas.Left="120" Canvas.Top="408" Foreground="RoyalBlue" FontWeight="Normal" FontFamily="Adobe Garamond Pro" FontSize="18" Checked="createAcc_rdb_Checked"/>
+            <Button Content="Log-In" Canvas.Left="330" Canvas.Top="395" Height="35" Width="60" Background="RoyalBlue" Foreground="White" FontWeight="Bold" FontSize="14" Style="{StaticResource rndButton}" Click="Button_Click"/>
+            <Button x:Name="viewPWD_btn" Content="" BorderThickness="0,0,0,0" Canvas.Left="345" Canvas.Top="322" Height="38" Width="45" BorderBrush="#FFABADB3" RenderTransformOrigin="0.367,0.197">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Usercontrols/eye_icon.png"/>
+                </Button.Background>
+            </Button>
+            <Border BorderThickness="1" BorderBrush="Gray" Height="44" Width="270" Canvas.Top="256" Canvas.Left="120" CornerRadius="10">
+                <TextBox TextWrapping="Wrap" Margin="9,9,9,9" Style="{StaticResource CompEmail_txt_Placeholder}"/>
+            </Border>
+            <Border BorderThickness="1" BorderBrush="Gray" Height="44" Width="270" Canvas.Left="120" Canvas.Top="319" CornerRadius="10"/>
+
+        </Canvas>
+
+    </Grid>
+</UserControl>

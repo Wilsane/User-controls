@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="Front.CreatingAcc_Page"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Front"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="500">
+    <Grid>
+        <Canvas Background="White" Height="600">
+            <Image Height="158" Canvas.Left="129" Canvas.Top="-7" Width="242" Source="/Logo2_PNG.png"/>
+            <Border BorderThickness="1" BorderBrush="#FFDDDDDD" Height="44" Width="270" Canvas.Top="166" Canvas.Left="115" CornerRadius="10">
+                <TextBox x:Name="CompName_txt" TextWrapping="Wrap" Margin="9,9,9,9" Style="{StaticResource CompName_txt_Placeholder}" FontSize="14"/>
+            </Border>
+            <Label Content="Create your Business-Online-Basics Account" Canvas.Left="57" Canvas.Top="127" Width="386" FontWeight="Bold" FontSize="18" Foreground="#FFEC3737"/>
+            <Border BorderThickness="1" BorderBrush="#FFDDDDDD" Height="44" Width="270" Canvas.Left="115" Canvas.Top="215" CornerRadius="10">
+                <TextBox x:Name="createCompEmail_txt" TextWrapping="Wrap" Margin="9,9,9,9" Style="{StaticResource CompEmail_txt_Placeholder}" FontSize="14"/>
+            </Border>
+            <Border BorderThickness="1" BorderBrush="#FFDDDDDD" Height="44" Width="270" Canvas.Left="115" Canvas.Top="264" CornerRadius="10">
+                <TextBox x:Name="CompTele_txt" TextWrapping="Wrap" Margin="9,9,9,9" Style="{StaticResource TeleNum_txt_Placeholder}" FontSize="14"/>
+            </Border>
+            <Border BorderThickness="1" BorderBrush="#FFDDDDDD" Height="44" Width="233" Canvas.Left="115" Canvas.Top="313" CornerRadius="10">
+                <TextBox x:Name="CompLogo_txt" TextWrapping="Wrap" Margin="9,9,9,9" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Style="{StaticResource CompLogo_txt_Placeholder}"/>
+            </Border>
+            <!--Company Logo goes within the boader-->
+            <Border BorderThickness="1" BorderBrush="#FFDDDDDD" Height="44" Width="270" Canvas.Left="115" Canvas.Top="432" CornerRadius="10">
+                <PasswordBox Margin="9,9,9,9" BorderBrush="{x:Null}" SelectionBrush="{x:Null}"/>
+            </Border>
+            <Border BorderThickness="1" BorderBrush="#FFDDDDDD" Height="44" Width="270" Canvas.Left="115" Canvas.Top="481" CornerRadius="10">
+                <PasswordBox Margin="9,9,9,9" BorderBrush="{x:Null}" SelectionBrush="{x:Null}"/>
+            </Border>
+            <Button x:Name="createAccNext_btn" Content="Next" Canvas.Left="310" Canvas.Top="530" Style="{StaticResource rndButton}" Background="#FF4196E1" Height="42" Width="75" Foreground="White" FontWeight="Bold" FontSize="16"/>
+            <Button x:Name="loadLogo_btn" Content="Upload" Canvas.Left="325" Canvas.Top="313" Style="{StaticResource rndButton}" Height="44" Width="60" Click="loadLogo_btn_Click"/>
+            <Label Content="*8 characters or more" Canvas.Left="115" Canvas.Top="398" FontFamily="Trebuchet MS" Foreground="#FFFF0808" FontSize="16"/>
+
+        </Canvas>
+
+    </Grid>
+
+</UserControl>
